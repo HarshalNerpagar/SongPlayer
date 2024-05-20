@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
@@ -25,8 +26,10 @@ const LoginPage = () => {
         localStorage.setItem('jwt', data.token);
         alert('Login successful');
         navigate('/');
+        
       } else {
         alert(data.message);
+
       }
     } catch (error) {
       console.error('Error:', error);
