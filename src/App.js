@@ -11,11 +11,10 @@ import { ToastContainer } from 'react-toastify';
 
 
 function App() {
-  const user = localStorage.getItem('jwt')
-  console.log(user);
+
   return (
     <Router>
-  <ToastContainer />
+      <ToastContainer />
       <NavBar />
       <Routes>
         <Route

@@ -4,14 +4,16 @@ import { Carousel } from 'primereact/carousel';
 import 'primeicons/primeicons.css';
 const MyCarousel = (props) => {
   const [trending, setTrinding] = useState([])
-  
   useEffect(()=>{
       const trendingSongs = async () => 
       fetch(props.api, {
         headers: {
           projectId: "f104bi07c490",
         }
-      }).then(res => res.json()).then(rep => setTrinding(rep));
+      }).then(res => res.json()).then((rep) => {
+        setTrinding(rep)
+
+      });
       trendingSongs();
 
     },[])
@@ -110,8 +112,8 @@ const MyCarousel = (props) => {
 
   return (
     <div className=" bg-white m-10">
-        <h1 className=" font-semibold text-3xl pl-5 pt-5">{props.title}</h1>
-        <Carousel value={trending.data} numVisible={5} numScroll={3} itemTemplate={productTemplate} />
+    <h1 className=" font-semibold text-3xl pl-5 pt-5">{props.title}</h1>
+    <Carousel value={trending.data} numVisible={5} numScroll={3} itemTemplate={productTemplate} />
     </div>
   )
 }

@@ -17,7 +17,7 @@ const LoginPage = () => {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'projectID': 'your_project_id_here',
+          'projectID': 'f104bi07c490',
         },
         body: JSON.stringify({ email, password, appType: 'music' }),
       });
