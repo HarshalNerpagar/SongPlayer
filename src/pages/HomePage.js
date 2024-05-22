@@ -1,14 +1,20 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import MyCarousel from '../components/Carousel';
-import Toast from './toast';
+
+
+        
+
 
 const HomePage = () => {
 
-
+  
   return (
     <div className=' mt-20 bg-[#E9E7E7]'>
       <MyCarousel title={"Tending Songs"} 
       api={'https://academics.newtonschool.co/api/v1/musicx/song?featured=Trending%20songs'}/>
+
+      <MyCarousel title={"Top 20 of this week"} 
+      api={'https://academics.newtonschool.co/api/v1/musicx/song?featured=Top+20+of+this+week'}/>
 
       <MyCarousel title={"Romantic"} 
       api={'https://academics.newtonschool.co/api/v1/musicx/song?mood=romantic'}/>
@@ -21,6 +27,7 @@ const HomePage = () => {
 
       <MyCarousel title={"Sad"} 
       api={'https://academics.newtonschool.co/api/v1/musicx/song?mood=sad'}/>
+
     </div>  
       
 
